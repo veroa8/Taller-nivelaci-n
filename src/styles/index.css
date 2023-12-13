@@ -1,0 +1,193 @@
+/* MODULO 2 */
+/* Punto 1 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sarabun:wght@700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(212, 226, 226);
+}
+h1{
+    align-items: center;
+    text-align: center;
+    color: brown;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header__title{
+    width: fit-content;
+    padding: 8px;
+}
+
+#nombre{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: flex-start;
+    
+}
+
+h3{
+    color:darkmagenta;
+    font-weight: bolder;
+}
+.header__realizado h4{margin: 0;}
+
+.main-container article{
+    text-align: center;
+}
+
+.main-container__content p{
+    padding: 20px;
+    text-align: justify;
+    background-color: rgb(220, 199, 239);
+    border-radius: 15px;
+    box-shadow:  5px 5px 32px #a1a1a1,
+                -5px -5px 32px rgb(91, 100, 151);
+}
+
+.main-container__list h3, .main-container__list li{
+    font-family: 'Poppins';
+}
+
+.main-container__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+}
+
+.main-container__list ul{
+    width: 180px;
+}
+
+.boton{
+    margin: 10px auto;
+    background-color: brown;
+    border-radius: 4px;
+    cursor: pointer;
+    a{
+        color: white;
+        font-weight: bolder;
+    }
+}
+/* Segundo punto */
+
+.cards-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: justify;
+    margin-top: 60px;
+    
+}
+
+.cards-container__card{
+    width: 220px;
+    font-size: 13px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgb(220, 199, 239)
+    
+}
+
+.cards-container__card h3{
+    text-align: center;
+    
+}
+.siberian-cat img{
+    display: flex;
+    align-items: center;
+    width: 217px;
+    height: 217px;
+    border-radius: 10px;
+    
+   
+
+}
+.siames-cat img{
+    display: flex;
+    align-items: center;
+    width: 217px;
+    height: 217px;
+    border-radius: 10px;
+   
+
+}
+.persa-cat img{
+    display: flex;
+    align-items: center;
+    width: 217px;
+    height: 217px;
+    border-radius: 10px;
+   
+
+}
+
+/* Tercer punto  */
+
+.gallery_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+  
+.gallery_container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Cuarto y quinto punto */
+
+@media screen and (max-width: 500px){
+    .cards-container__card{
+        width: 70%;
+        background: rgb(220, 199, 239)
+        margin: 0 auto; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .siberian-cat img{
+        display: flex;
+        align-items: center;
+        width: 217px;
+        height: 217px;
+        border-radius: 10px;
+       
+    
+    }
+    .siames-cat img{
+        display: flex;
+        align-items: center;
+        width: 217px;
+        height: 217px;
+        border-radius: 10px;
+       
+    
+    }
+    .persa-cat img{
+        display: flex;
+        align-items: center;
+        width: 217px;
+        height: 217px;
+        border-radius: 10px;
+       
+    
+    }
+}
+
+table{
+    margin-top: 30px;
+}

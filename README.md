@@ -24,7 +24,7 @@ Recuerdo que uno de los ejemplos que trabajamos en clase sobre un algoritmo pued
 - Sacar una arepa del empaque
 - Ponerla la arepa en la parrilla 
 - Prender el fogón
-Entre otras acciones… 
+- Entre otras acciones… 
 
 3. ¿Qué son estructuras de control en la programación? ¿Cuáles son los tipos de estructuras de control y las estructuras más comunes de cada tipo? Describir al menos dos tipos de estructura de control, explicar por qué son importantes y proporcionar ejemplos de cada uno de cómo se utilizan en el desarrollo web Frontend.
 
@@ -192,7 +192,7 @@ La organización elemental de una página web incluye las siguientes etiquetas:
 <html>: Marca el inicio de la página web.
 <head>: Señala la cabecera y alberga detalles descriptivos del sitio, así como los metadatos del documento.
 <body>: Engloba todos los elementos perceptibles en la página.
-<footer></footer>: Empleadas para especificar la sección de conclusión o pie de página en un documento.
+<footer>: Empleadas para especificar la sección de conclusión o pie de página en un documento.
 
 
 3.   ¿Qué es CSS y cuál es su propósito en el desarrollo web?
