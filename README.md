@@ -182,17 +182,17 @@ MÓDULO SOBRE HTML, CSS Y RESPONSIVE DESIGN
 
 1.  ¿Qué significa HTML y cuál es su función en el desarrollo web?
 
-Código qué es usado para estructurar todos los contenidos de una página web. 
+HTML, que significa "HyperText Markup Language" (Lenguaje de Marcado de Hipertexto), es el código qué es usado para estructurar todos los contenidos de una página web. Se utilizan etiquetas HTML para definir los encabezados, párrafos, enlaces e imágenes. Estas etiquetas permiten al navegador entender la jerarquía y presentación del contenido. 
 
 2.  ¿Cuál es la estructura básica de un documento HTML? Describir las etiquetas 
 esenciales.
 
 La organización elemental de una página web incluye las siguientes etiquetas:
-<!DOCTYPE html>: Notifica al navegador que el documento sigue el estándar HTML5.
-<html>: Marca el inicio de la página web.
-<head>: Señala la cabecera y alberga detalles descriptivos del sitio, así como los metadatos del documento.
-<body>: Engloba todos los elementos perceptibles en la página.
-<footer>: Empleadas para especificar la sección de conclusión o pie de página en un documento.
+<!-- <!DOCTYPE html>: --> Notifica al navegador que el documento sigue el estándar HTML5.
+<!-- <html>: --> Marca el inicio de la página web.
+<!-- <head>: --> Señala la cabecera y alberga detalles descriptivos del sitio, así como los metadatos del documento.
+<!-- <body>:  -->Engloba todos los elementos perceptibles en la página.
+<!-- <footer>: --> Empleadas para especificar la sección de conclusión o pie de página en un documento.
 
 
 3.   ¿Qué es CSS y cuál es su propósito en el desarrollo web?
@@ -200,6 +200,7 @@ La organización elemental de una página web incluye las siguientes etiquetas:
 CSS (Cascading Style Sheets) es un lenguaje de estilo en cascada utilizado para diseñar y presentar visualmente un documento escrito en HTML.
 
 ¿Qué implica?
+
 Estas pautas se relacionan con la manera en que se presenta una página web en la pantalla cuando el usuario utiliza un navegador o explorador gráfico.
 Regulan aspectos como el color, el fondo, el tipo de fuente, la apariencia de los bordes, los márgenes, la alineación y el espaciado entre caracteres, entre otros aspectos visuales.
 
@@ -286,38 +287,33 @@ Estilos Externos (External): Es comúnmente recomendado utilizar estilos externo
 
 6.  ¿Qué es flexbox y cómo se utiliza para el diseño de páginas web?
 
-Flexbox es un modelo de diseño en CSS que proporciona un diseño más eficiente y predecible en el diseño de páginas web, especialmente en la alineación y distribución de elementos en un contenedor, incluso cuando el tamaño de los elementos es desconocido o dinámico. Flexbox trabaja en un solo eje (fila o columna) o en ambos ejes simultáneamente, permitiendo crear diseños más flexibles y adaptables.
+Flexbox es un modelo de diseño en CSS que proporciona un diseño más eficiente y predecible en el diseño de páginas web,  Flexbox trabaja en un solo eje (fila o columna) o en ambos ejes simultáneamente, permitiendo crear diseños más flexibles y adaptables.
+
+Flexbox es un modelo de diseño en CSS que facilita la creación de diseños fluidos y flexibles en páginas web. Especialmente en la alineación y distribución de elementos en un contenedor, incluso cuando el tamaño de los elementos es desconocido o dinámico. Por lo que permite ajustar dinámicamente el tamaño de los elementos para adaptarse al espacio disponible.
 
 
 7. Explicar cómo se emplean las propiedades flexbox y explicar la función de las principales propiedades en la creación de diseños flexibles.
 
 Propiedades Flexbox y sus Funciones Principales:
-display (display: flex):
-Función: Declara un contenedor como un contenedor flex, estableciendo así un contexto flexbox.
+display (display: flex): Declara un contenedor como un contenedor flex, estableciendo así un contexto flexbox.
+
+flex-direction (flex-direction: row | row-reverse | column | column-reverse): Define la dirección principal del contenedor flex, estableciendo si los elementos se colocan en una fila (por defecto), en una columna, o en direcciones inversas.
 
 
-flex-direction (flex-direction: row | row-reverse | column | column-reverse):
-Función: Define la dirección principal del contenedor flex, estableciendo si los elementos se colocan en una fila (por defecto), en una columna, o en direcciones inversas.
+justify-content (justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly): Controla la alineación de los elementos a lo largo del eje principal del contenedor.
 
 
-justify-content (justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly):
-Función: Controla la alineación de los elementos a lo largo del eje principal del contenedor.
-
-
-align-items (align-items: flex-start | flex-end | center | baseline | stretch):
-Función: Alinea los elementos a lo largo del eje secundario del contenedor.
+align-items (align-items: flex-start | flex-end | center | baseline | stretch): Alinea los elementos a lo largo del eje secundario del contenedor.
 
 
 
-align-self (align-self: auto | flex-start | flex-end | center | baseline | stretch):
-Función: Permite controlar la alineación de un elemento específico dentro del contenedor, anulando la propiedad align-items.
+align-self (align-self: auto | flex-start | flex-end | center | baseline | stretch): Permite controlar la alineación de un elemento específico dentro del contenedor, anulando la propiedad align-items.
 
 
-flex (flex: none | [flex-grow] [flex-shrink] [flex-basis]):
-Función: Combina las propiedades flex-grow, flex-shrink, y flex-basis en una sola propiedad.
-order (order: <integer>):
+flex (flex: none | [flex-grow] [flex-shrink] [flex-basis]): Combina las propiedades flex-grow, flex-shrink, y flex-basis en una sola propiedad.
 
-Función: Establece el orden de presentación de un elemento flex dentro del contenedor.
+order (order: <integer>): Establece el orden de presentación de un elemento flex dentro del contenedor.
+
 Estas propiedades de Flexbox son esenciales para crear diseños flexibles y adaptables en el desarrollo web. Permiten organizar y alinear los elementos de manera eficiente, facilitando la creación de interfaces responsivas y mejorando la consistencia en la presentación de contenidos en diferentes dispositivos y tamaños de pantalla.
 
 
@@ -369,7 +365,9 @@ MÓDULO SOBRE DOM E INTERACCIÓN CON EL DOM
 
 1. ¿Qué es el DOM (Modelo de Objeto de Documento) en el contexto de la programación web?
 
-El DOM (Modelo de Objeto de Documento) en programación web es una interfaz que representa un documento HTML o XML como una estructura de árbol de objetos. Cada nodo en este árbol representa partes del documento, como elementos, atributos y texto. El DOM facilita la manipulación dinámica de la estructura y contenido de una página web mediante programación. Los desarrolladores pueden acceder y modificar elementos, atributos y contenido, lo que permite la creación de aplicaciones web interactivas sin necesidad de recargar la página. En resumen, el DOM es esencial para la interactividad y la manipulación dinámica en el desarrollo web.
+El DOM  o Modelo de Objeto de Documento en programación web es una interfaz que representa un documento HTML o XML como una estructura de árbol de objetos. Cada nodo en este árbol representa partes del documento, como elementos, atributos y texto. El DOM facilita la manipulación dinámica de la estructura y contenido de una página web mediante programación. Los desarrolladores pueden acceder y modificar elementos, atributos y contenido, lo que permite la creación de aplicaciones web interactivas sin necesidad de recargar la página. 
+
+ A través del DOM, se puede acceder, modificar, agregar o eliminar elementos y atributos en tiempo real. Esta manipulación dinámica del DOM es esencial para crear interactividad en las páginas web, como actualizar contenido, responder a eventos del usuario y modificar el estilo de la página.El DOM es esencial para la interactividad y la manipulación dinámica de elementos en una página web mediante código.
 
 
 2. ¿Cuál es la diferencia entre el DOM y el HTML en una página web?

@@ -96,11 +96,12 @@ h3{
     padding: 15px;
     border-radius: 15px;
     background: rgb(220, 199, 239)
-    
+
 }
 
 .cards-container__card h3{
     text-align: center;
+    color: brown;
     
 }
 .siberian-cat img{
@@ -109,9 +110,6 @@ h3{
     width: 217px;
     height: 217px;
     border-radius: 10px;
-    
-   
-
 }
 .siames-cat img{
     display: flex;
