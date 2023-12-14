@@ -335,12 +335,11 @@ CSS Grid Layout es un modelo de diseño en CSS que permite la creación de estru
   padding: 20px;
   text-align: center;
 }
-<div class="container">
+<!-- <div class="container">
   <div class="item">1</div>
   <div class="item">2</div>
   <div class="item">3</div>
-  <!-- Repetir para más elementos -->
-</div>
+</div> -->
 
 
 10.  ¿Qué significa el diseño responsivo en el contexto del desarrollo web?
@@ -491,14 +490,14 @@ El límite de capacidad para ambos es de aproximadamente 5 MB por dominio, aunqu
 4. ¿Qué son las promesas en JavaScript y para qué se utilizan en el desarrollo web?
 
 Las promesas en JavaScript son un patrón de manejo asíncrono que permite gestionar operaciones que llevan tiempo, como solicitudes a servidores o lecturas de archivos, de manera más efectiva. Una promesa representa un valor eventualmente disponible o un error, y tiene tres estados: pendiente, cumplida o rechazada.
-Se utilizan en el desarrollo web para gestionar operaciones asíncronas de manera más legible y mantenible. Al emplear promesas, se evita la anidación excesiva de funciones (callback hell), facilitando la comprensión del código asíncrono. Además, las promesas ofrecen un manejo centralizado de errores, mejorando la capacidad de depuración. Con la introducción de async/await en JavaScript, el uso de promesas se ha vuelto aún más elegante, proporcionando un código asíncrono más claro y fácil de seguir.
+Se utilizan en el desarrollo web para gestionar operaciones asíncronas de manera más legible y mantenible. Al emplear promesas, se evita la anidación excesiva de funciones (callback hell), facilitando la comprensión del código asíncrono. Además, las promesas ofrecen un manejo centralizado de errores, mejorando la capacidad de depuración.
 
 
 5. Explica el concepto de asincronía en programación y cómo las promesas ayudan a manejar operaciones asincrónicas.
 
 La asincronía en programación implica la ejecución de tareas sin bloquear el hilo principal, permitiendo que otras operaciones continúen mientras se completan tareas que pueden llevar tiempo. Esto es crucial para mejorar la eficiencia y la capacidad de respuesta en aplicaciones web.
 
-Las promesas en JavaScript son un patrón que facilita la gestión de operaciones asíncronas. Representan un valor futuro, ya sea una resolución exitosa o un rechazo. Las promesas ayudan a manejar la asincronía al permitir un flujo de control más claro con métodos como .then() para manejar casos exitosos y .catch() para gestionar errores. Además, las promesas son compatibles con async/await, simplificando aún más el código asíncrono al hacerlo parecer síncrono, mejorando la legibilidad y mantenibilidad del código.
+Las promesas en JavaScript son un patrón que facilita la gestión de operaciones asíncronas. Representan un valor futuro, ya sea una resolución exitosa o un rechazo. Las promesas ayudan a manejar la asincronía al permitir un flujo de control más claro con métodos como .then() para manejar casos exitosos y .catch() para gestionar errores. 
 
 
 6. Proporciona un ejemplo de cómo se utiliza una promesa para realizar una operación asincrónica, como una solicitud de red.
@@ -541,7 +540,7 @@ JSON Server es una herramienta que permite crear rápidamente una API RESTful ba
 
 8. ¿Por qué es útil simular una API REST falsa con JSON Server en el desarrollo frontend?
 
-Simular una API REST falsa con JSON Server en el desarrollo frontend es invaluable para acelerar el proceso de desarrollo. Permite a los desarrolladores frontend trabajar de manera independiente, prototipar rápidamente interfaces de usuario y realizar pruebas sin depender de un backend completamente desarrollado. Facilita el aislamiento de responsabilidades entre frontend y backend, permitiendo que ambos equipos avancen simultáneamente. Además, proporciona un entorno de desarrollo local eficiente para probar y educar a los desarrolladores sobre la interacción con APIs REST antes de que el backend esté listo. Esta herramienta agiliza el flujo de trabajo, mejora la colaboración entre equipos y facilita la construcción de aplicaciones frontend robustas.
+Simular una API REST falsa con JSON Server en el desarrollo frontend es muy útil para acelerar el proceso de desarrollo. Permite trabajar de manera independiente, prototipar rápidamente interfaces de usuario y realizar pruebas sin depender de un backend completamente desarrollado. Esta herramienta agiliza el flujo de trabajo, mejora la colaboración entre equipos y facilita la construcción de aplicaciones frontend robustas.
 
 
 9. ¿Cuáles son las diferencias claves entre los métodos del objeto promesa .then().catch() y las palabras claves async/await?
@@ -582,19 +581,25 @@ json-server --watch db.json
 
 GET (Obtener todos los usuarios):
 curl http://localhost:3000/usuarios
+
 POST (Agregar un nuevo usuario):
 curl -X POST -H "Content-Type: application/json" -d '{"nombre": "NuevoUsuario"}' http://localhost:3000/usuarios
+
 PUT (Actualizar un usuario):
 curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "UsuarioModificado"}' http://localhost:3000/usuarios/1
+
 PATCH (Actualizar parcialmente un usuario):
 curl -X PATCH -H "Content-Type: application/json" -d '{"nombre": "NuevoNombre"}' http://localhost:3000/usuarios/1
+
 DELETE (Eliminar un usuario):
 curl -X DELETE http://localhost:3000/usuarios/1
 
 
 11. Describe las diferencias entre Fetch y Axios como métodos para realizar solicitudes HTTP en JavaScript.
 
-Fetch y Axios son métodos para realizar solicitudes HTTP en JavaScript, pero difieren en sintaxis y funcionalidades. Fetch es una función nativa del navegador que utiliza promesas, mientras que Axios es una biblioteca externa que proporciona una interfaz más intuitiva y consistente en todos los navegadores. Axios facilita el manejo de errores, permite cancelar solicitudes y ofrece una sintaxis más clara para enviar datos. Fetch, aunque ampliamente compatible, requiere más configuración para manejar errores y enviar datos en formatos específicos. En resumen, Fetch es liviano y nativo, mientras que Axios es una elección popular por su versatilidad y facilidad de uso en aplicaciones JavaScript modernas.
+Fetch y Axios son métodos para realizar solicitudes HTTP en JavaScript, pero difieren en sintaxis y funcionalidades. Fetch es una función nativa del navegador que utiliza promesas, mientras que Axios es una biblioteca externa que proporciona una interfaz más intuitiva y consistente en todos los navegadores. Axios facilita el manejo de errores, permite cancelar solicitudes y ofrece una sintaxis más clara para enviar datos. Fetch, aunque ampliamente compatible, requiere más configuración para manejar errores y enviar datos en formatos específicos. 
+
+Fetch es liviano y nativo, mientras que Axios es una elección popular por su versatilidad y facilidad de uso en aplicaciones JavaScript modernas.
 
 12. ¿Por qué es importante considerar las peticiones HTTP en aplicaciones web modernas?
 
