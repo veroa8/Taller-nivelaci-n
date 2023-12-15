@@ -491,6 +491,7 @@ El límite de capacidad para ambos es de aproximadamente 5 MB por dominio, aunqu
 4. ¿Qué son las promesas en JavaScript y para qué se utilizan en el desarrollo web?
 
 Las promesas en JavaScript son un patrón de manejo asíncrono que permite gestionar operaciones que llevan tiempo, como solicitudes a servidores o lecturas de archivos, de manera más efectiva. Una promesa representa un valor eventualmente disponible o un error, y tiene tres estados: pendiente, cumplida o rechazada.
+
 Se utilizan en el desarrollo web para gestionar operaciones asíncronas de manera más legible y mantenible. Al emplear promesas, se evita la anidación excesiva de funciones (callback hell), facilitando la comprensión del código asíncrono. Además, las promesas ofrecen un manejo centralizado de errores, mejorando la capacidad de depuración.
 
 
@@ -604,7 +605,7 @@ Fetch es liviano y nativo, mientras que Axios es una elección popular por su ve
 
 12. ¿Por qué es importante considerar las peticiones HTTP en aplicaciones web modernas?
 
-Las peticiones HTTP son fundamentales en aplicaciones web modernas porque permiten la comunicación eficiente entre el navegador y el servidor. Estas solicitudes posibilitan la transferencia de datos de forma asíncrona, mejorando la capacidad de respuesta y permitiendo la creación de experiencias de usuario dinámicas. Las aplicaciones modernas dependen de peticiones HTTP para cargar datos de manera dinámica, interactuar con APIs y microservicios, y enviar información al servidor sin recargar la página. Además, el uso de protocolos seguros como HTTPS garantiza la privacidad y la integridad de los datos transmitidos, contribuyendo a la seguridad de las aplicaciones. Considerar las peticiones HTTP es esencial para el desarrollo de aplicaciones escalables, eficientes y capaces de proporcionar una experiencia de usuario moderna e interactiva.
+Las peticiones HTTP son fundamentales en aplicaciones web modernas porque permiten la comunicación eficiente entre el navegador y el servidor. Estas solicitudes posibilitan la transferencia de datos de forma asíncrona, mejorando la capacidad de respuesta y permitiendo la creación de experiencias de usuario dinámicas. Las aplicaciones modernas dependen de peticiones HTTP para cargar datos de manera dinámica, interactuar con APIs y microservicios, y enviar información al servidor sin recargar la página. Además, el uso de protocolos seguros como HTTPS garantiza la privacidad y la integridad de los datos transmitidos, contribuyendo a la seguridad de las aplicaciones.
 
 13. Proporciona ejemplos de cómo se utilizan Fetch y Axios para realizar solicitudes GET y POST.
 
@@ -651,7 +652,7 @@ axios.post('https://jsonplaceholder.typicode.com/posts', {
 
 14. Explica la importancia del manejo de errores al trabajar con promesas en el desarrollo web.
 
-El manejo de errores al trabajar con promesas en el desarrollo web es esencial para construir aplicaciones robustas y fiables. Permite identificar, informar y abordar problemas de manera efectiva, contribuyendo a una experiencia del usuario mejorada. La gestión adecuada de errores facilita la depuración, asegura la seguridad al prevenir vulnerabilidades y promueve la consistencia en el código. Además, es crucial para el mantenimiento a largo plazo y la escalabilidad, ya que ayuda a mantener la estabilidad del sistema a medida que evoluciona la aplicación. Proporcionar mensajes de error claros y significativos no solo facilita la corrección de problemas durante el desarrollo, sino que también mejora la usabilidad y la satisfacción del usuario final. En resumen, el manejo de errores en promesas es un componente clave para construir aplicaciones web exitosas y confiables.
+El manejo de errores al trabajar con promesas en el desarrollo web es esencial para construir aplicaciones robustas y fiables. Permite identificar, informar y abordar problemas de manera efectiva, contribuyendo a una experiencia del usuario mejorada. La gestión adecuada de errores facilita la depuración, asegura la seguridad al prevenir vulnerabilidades y promueve la consistencia en el código. Además, es crucial para el mantenimiento a largo plazo y la escalabilidad, ya que ayuda a mantener la estabilidad del sistema a medida que evoluciona la aplicación. Proporcionar mensajes de error claros y significativos no solo facilita la corrección de problemas durante el desarrollo, sino que también mejora la usabilidad y la satisfacción del usuario final. 
 
 
 15. Describe cómo se manejan los errores en las promesas, incluyendo el uso de catch.
@@ -685,3 +686,5 @@ fetch(url)
   });
 
 <!-- IMPORTANTE: En la carpeta del módulo 1 están todas las operaciones en JS de los demás modulos. Solo que no me dió para renombrar la carpeta -->
+
+<!-- La página "Los apuntes de Majo" fue muy una fuente importante para repasar y dar respuesta a este taller -->
