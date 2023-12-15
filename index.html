@@ -23,6 +23,9 @@
                     <br>
                     <br>
                     Como todos sabemos, los gatos son conocidos por su inteligencia, alegría y agilidad. Algunas personas han argumentado que los gatos se han vuelto tan comunes porque tienen una personalidad humana: autosuficientes, distantes con los extraños y territoriales, pero afectuosos con los miembros de la familia.
+                    <br>
+                    <br>
+                    ¡Adopta un gatico!
                 </p>
             </div>
             <div class="main-container__list">
@@ -83,21 +86,79 @@
         <section>
             <div>
                 <button type="button" id="toggle-btn">Cambiar color</button>
-                <span class="span-color">Este elemento cambiará de color</span>
+                <span class="span-color">Colores de gatos</span>
             </div>
         </section>
-        <!-- Segundo punto -->
+      <!--   segundo punto -->
         <section>
-            <ul id="list">
-                <li name="element-1">One</li>
-                <li name="element-2">Two</li>
-                <li name="element-3">Three</li>
-            </ul>
+            <ul id="miLista">
+                <li>Naranja</li>
+                <li>Blancos</li>
+                <li>Negros</li>
+                <li>Manchados</li>
+              </ul>
         </section>
         <!-- Tercer punto -->
-        <section>
-            <form id="form">
-                <input type="text" id="text" placeholder="Ingrese su dato acá">
-                <button type="submit">Enviar</button>
+        <section><!-- Añade esto al cuerpo de tu HTML -->
+            <form id="miFormulario">
+              <label for="campoEntrada">Tipo de gato:</label>
+              <input type="text" id="campoEntrada" name="campoEntrada" required>
+              <button type="submit">Enviar</button>
             </form>
-        </section>
+            </section>
+                <!-- Módulo 4  -->
+        <!-- Primer punto -->
+            <section>
+        <h2>LocalStorage, SessionStorage y Asincronísmo</h2>
+
+        <div id="LS&SS">
+            <label for="dato">Ingresa un dato:</label>
+            <input type="text" id="name" name="name" placeholder="Escriba la raza">
+            <input type="text" id="age" name="age" placeholder="Escriba la edad">
+            
+            <div id="save-info">
+                <button type="button" name="saveInLS" >Guardar localStorage</button>
+                <button type="button" name="saveInSS" >Guardar sessionStorage</button>
+            </div>
+            
+            <h4>Datos guardados:</h4>
+            <div id="get-info">
+                <button type="button" name="getFromLS" >Obtener de localStorage</button>
+                <button type="button" name="getFromSS" >Obtener de sessionStorage</button>
+                <div id="storagedData"></div>
+            </div>
+        </div>
+        <!-- Segundo punto -->
+        <h4>Simulación de promesa</h4>
+        <div id="resultSection"></div>
+            </section>
+            <section>
+                <!-- <h1>BASE DE DATOS</h1>
+                <div>
+                    <form id="userForm">
+                        <label for="nameInput">Nombre:</label>
+                        <input type="text" id="nameInput" name="nameInput">
+                        <button type="submit">Crear Usuario</button>
+                      </form>
+                      
+                      <div id="userList">
+                        <h2>Lista de Usuarios:</h2>
+                        <ul id="users"></ul>
+                      </div>
+                </div> -->
+                <h1>Registro de Gatos</h1>
+
+                <form id="userForm">
+                    <label for="nameInput">Nombre del gato:</label>
+                    <input type="text" id="nameInput" required>
+                    <button type="submit">Agregar Gato</button>
+                </form>
+            
+                <p id="errorMessage"></p>
+            
+                <ul id="users"></ul>
+            </section>
+            <script type="module" src="./src/Modulo 1/script/index.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        </body>
+        </html>

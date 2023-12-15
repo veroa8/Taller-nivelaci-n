@@ -147,6 +147,10 @@ h3{
 }
 
 /* Cuarto y quinto punto */
+/* modulo 3 */
+li{
+    cursor: pointer;
+}
 
 @media screen and (max-width: 500px){
     .cards-container__card{
@@ -188,4 +192,8 @@ h3{
 
 table{
     margin-top: 30px;
+}
+/* modulo 3 */
+li{
+    cursor: pointer;
 }

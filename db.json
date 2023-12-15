@@ -1,0 +1,63 @@
+{
+  "gatos": [
+    {
+      "nombre": "Cleo",
+      "edad": "2 años",
+      "raza": "Criollo",
+      "sexo": "Hembra",
+      "id": 1
+    },
+    {
+      "nombre": "Michito",
+      "edad": "8 meses",
+      "raza": "Persa",
+      "sexo": "Macho",
+      "id": 2
+    },
+    {
+      "nombre": "Anya",
+      "edad": "4 años",
+      "raza": "Siberiana",
+      "sexo": "Hembra",
+      "id": 3
+    },
+    {
+      "nombre": "Leo",
+      "edad": "5 años",
+      "raza": "Criollo",
+      "sexo": "Macho",
+      "id": 4
+    },
+    {
+      "nombre": "Ali",
+      "edad": "3 meses",
+      "raza": "Criolla",
+      "sexo": "Hembra",
+      "id": 5
+    },
+    {
+      "name": "vero",
+      "id": 6
+    },
+    {
+      "name": "persa",
+      "id": 7
+    },
+    {
+      "name": "cleo",
+      "id": 8
+    },
+    {
+      "name": "Anya",
+      "id": 9
+    },
+    {
+      "name": "michito",
+      "id": 10
+    },
+    {
+      "name": "criollo",
+      "id": 11
+    }
+  ]
+}

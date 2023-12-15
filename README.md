@@ -2,6 +2,7 @@ Taller de Nivelación Curso Desarrollo Web Frontend
 
 MÓDULO  SOBRE  LÓGICA,  LÓGICA  DE  PROGRAMACIÓN  Y  PROGRAMACIÓN  CON JAVASCRIPT 
 
+
  Preguntas teóricas 
 
 1. ¿Qué es la lógica en el contexto de la programación? Y explicar por qué es importante en el desarrollo web Frontend.
@@ -682,3 +683,5 @@ fetch(url)
     // Manejar el error de la solicitud de red
     console.error('Error en la solicitud de red:', error);
   });
+
+<!-- IMPORTANTE: En la carpeta del módulo 1 están todas las operaciones en JS de los demás modulos. Solo que no me dió para renombrar la carpeta -->

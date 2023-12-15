@@ -58,6 +58,8 @@ console.log("La suma de los números pares es:", resultado);
 
 // PREGUNTAS PRÁCTICAS MODULO 3
 
+// PREGUNTAS PRÁCTICAS MODULO 3
+
 // 1. Escribir una función en JavaScript que tome un botón en el DOM y, al hacer click en él, cambie el color de fondo de un elemento específico en la página. Luego, agregar el botón y el elemento objetivo en el DOM y asociar la función al evento “click”.
 
 
@@ -74,30 +76,255 @@ togglerBtn.addEventListener("click", () => {
     flag = !flag;
     changeColor(flag)
 })
+/* segundo punto */
+document.getElementById('miLista').addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    console.log('Elemento clicado:', e.target.textContent);
+  }
+});
+/* Tercer punto */
+document.getElementById('miFormulario').addEventListener('submit', function(e) {
+  e.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
-// 2. Crear una lista no ordenada de elementos (por ejemplo, elementos de lista) en el DOM. Implementar la delegación de eventos (event delegation) para que, al hacer clic en cualquier elemento de la lista, se muestre un mensaje en la consola que indique qué elemento de la lista se ha hecho clic.
+  var campoEntradaValue = document.getElementById('campoEntrada').value;
 
+  if (!campoEntradaValue.trim()) {
+    alert('Error: El campo de entrada no puede estar vacío.');
+  } else {
+    console.log('Dato ingresado:', campoEntradaValue);
+    alert('Formulario correctamente diligenciado');
+  }
+});
 
-const list = document.getElementById("list");
+// PREGUNTAS PRÁCTICAS MODULO 4
 
-list.addEventListener("click", (e) => {
-    console.log(e.target.attributes["name"].value);
-})
+// 1. En una sección de la página web construida en los módulos anteriores, permitir a un usuario almacenar y recuperar datos utilizando localStorage y sessionStorage. Demostrar cómo se puede guardar y recuperar datos de estas áreas de almacenamiento del navegador.
 
-// 3. Agregar un formulario a tu página web con un campo de entrada y un botón "Enviar". Implementar una función que sea llamada al enviar el formulario y que valide el campo de entrada (por ejemplo, si está vacío), muestre un mensaje de error accesible si es necesario y en caso de que el formulario esté correctamente diligenciado muestre en consola un objeto con el dato que ha ingresado el usuario en el campo de entrada y un alert con el siguiente mensaje: “Formulario correctamente diligenciado”.
+const saveContainer = document.getElementById('save-info');
+const getContainer = document.getElementById('get-info');
 
-const form = document.getElementById("form");
+saveContainer.addEventListener('click', (e) => {
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    
-    let text = document.getElementById("text").value;
-    if(text == '') alert("¡Error, Diligencie el campo!");
+    if(name == '' || age == '') alert("¡Diligencia los campos!");
     else {
-        const object = {
-            data: text
-        };
-        console.log("Este es el objeto con el dato:", object);
-        alert("Formulario correctamente diligenciado");
+        const data = {
+            name: name,
+            age: age
+        }
+    
+        if(e.target.attributes.name.value == 'saveInLS') localStorage.setItem('data', JSON.stringify(data));
+        else sessionStorage.setItem('data', JSON.stringify(data));
     }
 })
+
+getContainer.addEventListener('click', (e) => {
+    const storagedData = document.getElementById('storagedData');
+
+    if(e.target.attributes.name.value == 'getFromLS') storagedData.innerHTML = localStorage.getItem('data');
+    else storagedData.innerHTML = sessionStorage.getItem('data');
+})
+
+// 2. Escribir una función que utilice una promesa para simular una operación asincrónica, como, por ejemplo, una solicitud de datos. Luego, mostrar los resultados de la promesa en una sección en la página web.
+
+    function operacionAsincronica() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const exito = true; 
+          if (exito) {
+            resolve('Operación completada con éxito');
+          } else {
+            reject('Error en la operación');
+          }
+        }, 2000); 
+      });
+    }
+function showResp(resultados) {
+  const resultSection = document.getElementById("resultSection");
+  resultSection.innerHTML = `<p>${resultados}</p>`;
+}
+
+    operacionAsincronica()
+      .then(resultado => console.log('Resultado:', resultado))
+      .catch(error => console.error('Error:', error));
+
+      // 3.	Crear una API falsa con JSON Server y realizar una solicitud GET y POST con Fetch o Axios y mostrar los resultados en una sección de la página web.
+
+    /*   document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('userForm');
+        const userList = document.getElementById('users');
+      
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+      
+          const name = document.getElementById('nameInput').value;
+      
+          checkAndAddUser(name, userList);
+        });
+      
+        displayUserList(userList);
+      });
+      
+      function checkAndAddUser(name, userList) {
+        axios.get('http://localhost:3000/gatos')
+          .then((response) => {
+            const users = response.data; 
+      
+            if (Array.isArray(users)) {
+              const existingUser = users.find(user => user.name === name);
+      
+              if (existingUser) {
+                console.log(`El usuario "${name}" ya existe.`);
+      
+                document.getElementById('errorMessage').textContent = `El usuario "${name}" ya existe.`;
+              } else {
+                const newUser = {
+                  name: name 
+                };
+                const newUserId = generateUniqueId(users);
+                newUser.id = newUserId;
+      
+                axios.post('http://localhost:3000/gatos', newUser)
+                  .then(() => {
+                    console.log('Nuevo usuario creado');
+      
+                    displayUserList(userList);
+                  })
+                  .catch((error) => {
+                    console.error('Error en POST:', error);
+                  });
+              }
+            } else {
+              console.error('La respuesta no contiene una lista válida de usuarios.');
+            }
+          })
+          .catch((error) => {
+            console.error('Error en GET:', error);
+          });
+      }
+      
+      
+      function displayUserList(userList) {
+        axios.get('http://localhost:3000/gatos')
+          .then((response) => {
+            const users = response.data;
+      
+            userList.innerHTML = ''; 
+      
+            if (Array.isArray(users)) {
+              users.forEach(user => {
+                const listItem = document.createElement('li');
+                listItem.textContent = user.name;
+                userList.appendChild(listItem);
+              });
+            } else {
+              console.error('La respuesta no contiene una lista válida de usuarios.');
+            }
+          })
+          .catch((error) => {
+            console.error('Error en GET:', error);
+          });
+      }
+      
+      function generateUniqueId(users) {
+        if (users.length === 0) {
+          return 1; 
+        }
+      
+        let maxId = 0;
+        users.forEach(user => {
+          if (user.id > maxId) {
+            maxId = user.id;
+          }
+        });
+        return maxId + 1;
+      } */
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('userForm');
+        const userList = document.getElementById('users');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('nameInput').value;
+
+            checkAndAddUser(name, userList);
+        });
+
+        displayUserList(userList);
+    });
+
+    function checkAndAddUser(name, userList) {
+        axios.get('http://localhost:3000/gatos')
+            .then((response) => {
+                const users = response.data;
+
+                if (Array.isArray(users)) {
+                    const existingUser = users.find(user => user.name === name);
+
+                    if (existingUser) {
+                        console.log(`El gato "${name}" ya existe.`);
+
+                        document.getElementById('errorMessage').textContent = `El gato "${name}" ya existe.`;
+                    } else {
+                        const newUser = {
+                            name: name
+                        };
+                        const newUserId = generateUniqueId(users);
+                        newUser.id = newUserId;
+
+                        axios.post('http://localhost:3000/gatos', newUser)
+                            .then(() => {
+                                console.log('Nuevo gato creado');
+
+                                displayUserList(userList);
+                            })
+                            .catch((error) => {
+                                console.error('Error en POST:', error);
+                            });
+                    }
+                } else {
+                    console.error('La respuesta no contiene una lista válida de gatos.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error en GET:', error);
+            });
+    }
+
+    function displayUserList(userList) {
+        axios.get('http://localhost:3000/gatos')
+            .then((response) => {
+                const users = response.data;
+
+                userList.innerHTML = '';
+
+                if (Array.isArray(users)) {
+                    users.forEach(user => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = user.name;
+                        userList.appendChild(listItem);
+                    });
+                } else {
+                    console.error('La respuesta no contiene una lista válida de gatos.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error en GET:', error);
+            });
+    }
+
+    function generateUniqueId(users) {
+        if (users.length === 0) {
+            return 1;
+        }
+
+        let maxId = 0;
+        users.forEach(user => {
+            if (user.id > maxId) {
+                maxId = user.id;
+            }
+        });
+        return maxId + 1;
+    }
