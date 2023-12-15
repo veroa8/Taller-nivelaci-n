@@ -687,4 +687,4 @@ fetch(url)
 
 <!-- IMPORTANTE: En la carpeta del módulo 1 están todas las operaciones en JS de los demás modulos. Solo que no me dió para renombrar la carpeta -->
 
-<!-- La página "Los apuntes de Majo" fue muy una fuente importante para repasar y dar respuesta a este taller -->
+<!-- La página "Los apuntes de Majo" fue una fuente muy importante para repasar y dar respuesta a este taller -->
